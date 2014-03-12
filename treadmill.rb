@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby -w
 require 'date'
+require 'fileutils'
 
 messages = [
   'My kid\'s appointment at the pediatrician can wait, I need to get this commit in.',
@@ -17,3 +18,4 @@ gh_founding.to_date.step(Date.today) do |day|
   system({'GIT_COMMITTER_DATE' => day.rfc2822, 'GIT_AUTHOR_DATE' => day.rfc2822}, "git commit -q -F msg -- self_worth")
 end
 
+FileUtils.rm 'msg'
