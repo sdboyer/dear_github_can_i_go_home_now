@@ -6,8 +6,12 @@ So, we know that [https://blog.jcoglan.com/2013/11/15/why-github-is-not-your-cv/
 
 But it's kinda insidious. Not a lot, but a bit. I mean, gotta keep that streak, right? Plus, other people DO look at it, and it means something to them. Maybe more than it should. And possibly not quite what they think it does. I mean, [http://www.ashedryden.com/blog/the-ethics-of-unpaid-labor-and-the-oss-community](what does it really mean that I have these contributions?) Maybe I am better. Or not?
 
-Eh, well, better safe than sorry - gimme the numbers! Right? So just fork, then `generate_self_worth` for me, plz. Because I'd like to stop coding and go home now.
+Eh, well, better safe than sorry - gimme the numbers! Right? So just `generate_self_worth` for me, plz. Because I'd like to stop coding and go home now.
 
 ## No but really
 
 Github, I love you. I really, deeply do. So much respect. But it'd be sweet if you could tap the deep wells of creative people you have to find a less reductionist way of representing my value to the world.
+
+## Agree?
+
+Then set this up yourself, too. We'll have a little "protest!" If you fork, you won't get credit, so manually make a new github repo, fetch this repo in, run `generate_self_worth`, then push to master of your new repo.
