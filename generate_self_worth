@@ -27,10 +27,10 @@ gh_founding.to_date.step(Date.today).reverse_each do |day|
   File.open('msg', 'w') { |f| f.write(messages.sample) }
   system({'GIT_COMMITTER_DATE' => day.rfc2822, 'GIT_AUTHOR_DATE' => day.rfc2822}, "git commit -q -F msg -- self_worth")
   i += 1
-  $stdout.write "Proving your worth with commits in #{day.strftime('%B, %Y')}...\r"
+  $stdout.write "\r\033[KProving your worth with commits in #{day.strftime('%B, %Y')}..."
 end
 
 FileUtils.rm 'msg'
 
-puts "Backfilled #{i} commits, one per day to the day Github was founded!"
+puts "\n\nBackfilled #{i} commits, one per day to the day Github was founded!"
 puts 'Now show the world you are worth the physical space your body occupies - PUSH TO GITHUB! (`git push origin i-am-my-commits`)'
