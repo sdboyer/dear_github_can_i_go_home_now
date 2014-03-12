@@ -15,7 +15,7 @@ rr = "Never gonna give you up Never gonna let you down Never gonna run around an
 # yay sloppy!
 raise 'plz run from master, kthx' unless `git rev-parse --abbrev-ref HEAD`.strip == 'master'
 start = `git ls-remote https://github.com/sdboyer/dear_github_can_i_go_home_now.git`.strip.match(/([a-z0-9]{40})\trefs\/heads\/genesis/)
-`git reset --hard #{start}`
+`git reset --hard #{start[1]}`
 
 puts 'Traveling back in time to the founding of Github! (actually, just a year.)'
 i = 0
