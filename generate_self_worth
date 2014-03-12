@@ -10,7 +10,7 @@ messages = [
   "My employer lets me use work time to contribute to open source."
 ]
 
-rr = %w{ Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you\n }
+rr = "Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you"
 
 gh_founding = DateTime.new(2008,7,21)
 
@@ -23,7 +23,11 @@ raise 'plz run from master, kthx' unless `git rev-parse --abbrev-ref HEAD`.strip
 puts 'Traveling back in time to the founding of Github!'
 i = 0
 gh_founding.to_date.step(Date.today).reverse_each do |day|
-  File.open('self_worth', 'a') { |f| f.write(rr[i % 34]) }
+  str = rr.split(' ')[i % 34]
+  extra = i % 34 == 0 ? "\n" : ' '
+  str = extra << str if i != 0
+
+  File.open('self_worth', 'a') { |f| f.write(str) }
   File.open('msg', 'w') { |f| f.write(messages.sample) }
   system({'GIT_COMMITTER_DATE' => day.rfc2822, 'GIT_AUTHOR_DATE' => day.rfc2822}, "git commit -q -F msg -- self_worth")
   i += 1
