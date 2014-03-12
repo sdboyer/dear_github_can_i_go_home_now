@@ -9,8 +9,8 @@ messages = [
 gh_founding = DateTime.new(2008,7,21)
 
 gh_founding.to_date.step(Date.today) do |day|
-  File.open('my_value_as_a_coder', 'a') { |f| f.write('1') }
-  `GIT_COMMITTER_DATE=#{day.rfc2822} GIT_AUTHOR_DATE=#{day.rfc2822} git commit my_value_as_a_coder -m '#{messages.sample}'`
+  File.open('self_worth', 'a') { |f| f.write("1\n") }
+  `GIT_COMMITTER_DATE=#{day.rfc2822} GIT_AUTHOR_DATE=#{day.rfc2822} git commit -m '#{messages.sample}' self_worth`
 end
 
 
