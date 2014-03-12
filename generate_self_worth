@@ -26,7 +26,7 @@ Date.today.prev_year.step(Date.today) do |day|
 
   File.open('self_worth', 'a') { |f| f.write(str) }
   File.open('msg', 'w') { |f| f.write(messages.sample) }
-  t = day.to_time + rand(86400)
+  t = day.to_time + 14400 + rand(57600)
   system({'GIT_COMMITTER_DATE' => t.to_s, 'GIT_AUTHOR_DATE' => t.to_s}, "git commit -q -F msg -- self_worth")
   i += 1
   $stdout.write "\r\033[KProving your worth with commits in #{day.strftime('%B, %Y')}..."
