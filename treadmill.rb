@@ -24,3 +24,5 @@ gh_founding.to_date.step(Date.today) do |day|
 end
 
 FileUtils.rm 'msg'
+
+puts 'Now prove you are worth the physical space your body occupies - PUSH TO GITHUB!'
