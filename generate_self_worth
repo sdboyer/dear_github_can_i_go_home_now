@@ -12,17 +12,15 @@ messages = [
 
 rr = "Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you"
 
-gh_founding = DateTime.new(2008,7,21)
-
 # yay sloppy!
 raise 'plz run from master, kthx' unless `git rev-parse --abbrev-ref HEAD`.strip == 'master'
 
 `git branch -D i-am-my-commits` if system 'git show-ref --verify -q refs/heads/i-am-my-commits'
 `git branch -q i-am-my-commits; git checkout i-am-my-commits`
 
-puts 'Traveling back in time to the founding of Github!'
+puts 'Traveling back in time to the founding of Github! (actually, just a year.)'
 i = 0
-gh_founding.to_date.step(Date.today).reverse_each do |day|
+Date.today.prev_year.step(Date.today) do |day|
   str = rr.split(' ')[i % 34]
   extra = i % 34 == 0 ? "\n" : ' '
   str = extra << str if i != 0
@@ -36,5 +34,4 @@ end
 
 FileUtils.rm 'msg'
 
-puts "\n\nBackfilled #{i} commits, one per day to the day Github was founded!"
-puts 'Now show the world you are worth the physical space your body occupies - PUSH TO GITHUB! (`git push origin i-am-my-commits`)'
+puts "\n\nNow show the world you are worth the physical space your body occupies - PUSH TO GITHUB! (`git push origin i-am-my-commits`)"
