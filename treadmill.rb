@@ -11,6 +11,11 @@ rr = %w{ Never gonna give you up Never gonna let you down Never gonna run around
 
 gh_founding = DateTime.new(2008,7,21)
 
+# yay sloppy!
+raise 'plz run from master, kthx' unless `git rev-parse --abbrev-ref HEAD` == 'master'
+
+`git branch -D i-am-my-commits; git branch i-am-my-commits; git checkout i-am-my-commits`
+
 i = 0
 gh_founding.to_date.step(Date.today) do |day|
   File.open('self_worth', 'a') { |f| f.write(rr[i % 34]) }
