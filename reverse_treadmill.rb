@@ -11,7 +11,7 @@ gh_founding = DateTime.new(2008,7,21)
 
 gh_founding.to_date.step(Date.today) do |day|
   File.open('self_worth', 'a') { |f| f.write("1\n") }
-  `GIT_COMMITTER_DATE=#{day.rfc2822} GIT_AUTHOR_DATE=#{day.rfc2822} git commit -m #{Shellwords.escape(messages.sample)} self_worth`
+  system({'GIT_COMMITTER_DATE' => day.rfc2822, 'GIT_AUTHOR_DATE' => day.rfc2822}, "git commit -m #{Shellwords.escape(messages.sample)} self_worth`")
 end
 
 
