@@ -2,6 +2,7 @@
 require 'date'
 require 'fileutils'
 
+# OMG PLZ SEND PULL REQUESTS WITH MORE AWESOME MSGS
 messages = [
   'My kid\'s appointment at the pediatrician can wait, I need to get this commit in.',
   'Sorry honey, I need to keep my streak going - we\'ll have sex tomorrow!'
