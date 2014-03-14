@@ -7,7 +7,8 @@ messages = [
   "My kid's appointment at the pediatrician can wait, I need to get this commit in.",
   "Sorry honey, I need to keep my streak going - we'll have sex tomorrow!",
   "This commit brought to you by my privilege.",
-  "My employer lets me use work time to contribute to open source."
+  "My employer lets me use work time to contribute to open source.",
+  "It'll be ok, we'll live off my Gittips!"
 ]
 
 rr = "Never gonna give you up Never gonna let you down Never gonna run around and desert you Never gonna make you cry Never gonna say goodbye Never gonna tell a lie and hurt you"
