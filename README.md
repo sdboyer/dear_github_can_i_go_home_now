@@ -1,6 +1,6 @@
 # Dear Github, can I go home now?
 
-_Only half trollin'._
+_Only half jokin'._
 
 So, we know that [Github is not our CV](https://blog.jcoglan.com/2013/11/15/why-github-is-not-your-cv/), right? Totally. It still sorta feels that way, though. I mean, how great does it feel to have green contribution boxes stretching all the way back over the last year? SUPERCALIFRAGILISTICEXPIALIDOCIOUS, that's how.
 
